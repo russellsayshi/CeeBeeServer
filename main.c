@@ -281,7 +281,9 @@ struct HTTP_request parse_request(char* response) {
 	if(response[ptr] == 0) return res;
 
 	const size_t max_count = 20;
-	char method[max_count] = {0};
+	char method[max_count];
+	for(int i = 0; i < max_count; i++) method[i] = 0;
+
 	size_t counter = 0;
 	while(response[ptr] != ' ' && response[ptr] != 0 && counter < max_count - 1) {
 		method[counter] = response[ptr];
