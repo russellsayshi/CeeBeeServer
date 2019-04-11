@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bee generator</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<h1>Generate a bee image</h1>
+		<p>Original image:</p>
+		<img src="/bee.bmp" id="img" />
+		<p>Use this form to generate a bee:</p>
+		<form action="/bee.bmp" method="get">
+			<label for="pts">Every ___ bytes</label> <input id="pts" name="pts" value="3" type="number" /><br />
+			<label for="val">Set the value to</label> <input id="val" name="val" value="255" type="number" /><br />
+			<label for="offset">Starting from</label> <input id="offset" name="offset" value="1" type="number" /><br />
+			<input type="submit" />
+		</form>
+		<hr />
+		<a href="/">Home</a>
+	</body>
+</html>
